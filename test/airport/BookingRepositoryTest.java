@@ -10,10 +10,10 @@ import java.util.List;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-public class FlightRepositoryTest {
+public class BookingRepositoryTest {
     @Test
-    public void shouldAddFlight() throws AirportDoesNotExistException {
-        FlightRepository flightRepository = new FlightRepository();
+    public void shouldAddBooking() throws AirportDoesNotExistException {
+        BookingRepository bookingRepository = new BookingRepository();
 
         String loc = "KSTVWO";
         FlightCompanies company = FlightCompanies.GOL;
@@ -25,11 +25,11 @@ public class FlightRepositoryTest {
 
         Flight flight = new Flight(loc, company, route, travelTime);
 
-        flightRepository.add(flight);
+        Booking booking = new Booking(new Passenger("09272727", "Fulano"), flight);
+        bookingRepository.add(booking);
 
-        List<Flight> expectedFlights = Collections.singletonList(flight);
+        List<Booking> expectedBookings = Collections.singletonList(booking);
 
-        assertThat(flightRepository.getFlights(), is(expectedFlights));
+        assertThat(expectedBookings, is(bookingRepository.getBookings()));
     }
-
 }
