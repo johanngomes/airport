@@ -4,9 +4,9 @@ import airport.exceptions.AirportDoesNotExistException;
 import org.junit.Test;
 
 import java.time.LocalTime;
-import java.util.Collections;
 import java.util.List;
 
+import static java.util.Collections.singletonList;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
@@ -28,7 +28,7 @@ public class BookingRepositoryTest {
         Booking booking = new Booking(new Passenger("09272727", "Fulano"), flight);
         bookingRepository.add(booking);
 
-        List<Booking> expectedBookings = Collections.singletonList(booking);
+        List<Booking> expectedBookings = singletonList(booking);
 
         assertThat(expectedBookings, is(bookingRepository.getBookings()));
     }

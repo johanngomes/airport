@@ -4,16 +4,16 @@ import airport.exceptions.AirportDoesNotExistException;
 import org.junit.Test;
 
 import java.time.LocalTime;
-import java.util.Collections;
 import java.util.List;
 
+import static java.util.Collections.singletonList;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 public class FlightRepositoryTest {
     @Test
     public void shouldAddFlight() throws AirportDoesNotExistException {
-        FlightRepository flightRepository = new FlightRepository();
+        FlightRepository.removeAll();
 
         String loc = "KSTVWO";
         FlightCompanies company = FlightCompanies.GOL;
@@ -25,11 +25,10 @@ public class FlightRepositoryTest {
 
         Flight flight = new Flight(loc, company, route, travelTime);
 
-        flightRepository.add(flight);
+        FlightRepository.add(flight);
 
-        List<Flight> expectedFlights = Collections.singletonList(flight);
+        List<Flight> expectedFlights = singletonList(flight);
 
-        assertThat(flightRepository.getFlights(), is(expectedFlights));
+        assertThat(FlightRepository.getFlights(), is(expectedFlights));
     }
-
 }

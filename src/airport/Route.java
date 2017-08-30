@@ -1,5 +1,10 @@
 package airport;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
+@Getter
+@EqualsAndHashCode
 public class Route {
     private Airport from;
     private Airport to;

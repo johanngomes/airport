@@ -1,7 +1,10 @@
 package airport;
 
+import lombok.EqualsAndHashCode;
+
 import java.time.LocalTime;
 
+@EqualsAndHashCode
 public class TravelTime {
     private LocalTime arrival;
     private LocalTime departure;

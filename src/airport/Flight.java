@@ -1,5 +1,10 @@
 package airport;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
+@Getter
+@EqualsAndHashCode
 public class Flight {
     private final String loc;
     private final FlightCompanies company;

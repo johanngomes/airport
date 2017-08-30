@@ -1,5 +1,5 @@
 package airport;
 
 public enum AirportCode {
-    GIG, GRU
+    GIG, REC, POA, BSB, BEL, GRU
 }

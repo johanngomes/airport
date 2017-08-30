@@ -1,5 +1,5 @@
 package airport;
 
 public enum FlightCompanies {
-    GOL
+    LATAM, GOL
 }

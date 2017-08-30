@@ -1,5 +1,10 @@
 package airport;
 
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+
+@Getter
+@EqualsAndHashCode
 public class Airport {
     private AirportCode airportCode;
     private Country country;
