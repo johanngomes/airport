@@ -32,5 +32,5 @@ public class FlightFinderTest {
         assertThat(flight, is(expectedFlight));
     }
 
-    
+
 }
