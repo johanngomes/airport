@@ -2,9 +2,6 @@ package manager;
 
 import manager.airport.AirportCode;
 import manager.airport.AirportFactory;
-import manager.exceptions.AirportDoesNotExistException;
-import manager.exceptions.InvalidFullNameException;
-import manager.exceptions.InvalidNumberOfDigitsCPFException;
 import org.junit.Test;
 
 import java.time.LocalTime;
@@ -16,11 +13,11 @@ import static org.junit.Assert.assertThat;
 
 public class BookingRepositoryTest {
     @Test
-    public void shouldAddBooking() throws AirportDoesNotExistException, InvalidNumberOfDigitsCPFException, InvalidFullNameException {
+    public void shouldAddBooking() throws Exception {
         BookingRepository bookingRepository = new BookingRepository();
 
         String loc = "KSTVWO";
-        FlightCompanies company = FlightCompanies.GOL;
+        FlightCompany company = FlightCompany.GOL;
 
         AirportFactory airportFactory = new AirportFactory();
 

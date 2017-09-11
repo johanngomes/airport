@@ -3,7 +3,7 @@ package manager.seeds;
 import manager.airport.AirportCode;
 import manager.airport.AirportFactory;
 import manager.Flight;
-import manager.FlightCompanies;
+import manager.FlightCompany;
 import manager.FlightRepository;
 import manager.Route;
 import manager.TravelTime;
@@ -25,7 +25,7 @@ public class FlightRepositorySeed {
 
     private static void createBsbToBel() throws AirportDoesNotExistException {
         String loc = "MADAAW";
-        FlightCompanies company = FlightCompanies.GOL;
+        FlightCompany company = FlightCompany.GOL;
         Route route = new Route(airportFactory.getAirport(AirportCode.BSB), airportFactory.getAirport(AirportCode.BEL));
         TravelTime travelTime = new TravelTime(LocalTime.of(13, 30), LocalTime.of(15, 20));
         Flight flight = new Flight(loc, company, route, travelTime);
@@ -35,7 +35,7 @@ public class FlightRepositorySeed {
 
     private static void createRjToBsb() throws AirportDoesNotExistException {
         String loc = "JWADMV";
-        FlightCompanies company = FlightCompanies.LATAM;
+        FlightCompany company = FlightCompany.LATAM;
         Route route = new Route(airportFactory.getAirport(AirportCode.GIG), airportFactory.getAirport(AirportCode.BSB));
         TravelTime travelTime = new TravelTime(LocalTime.of(13, 30), LocalTime.of(15, 20));
         Flight flight = new Flight(loc, company, route, travelTime);
@@ -45,7 +45,7 @@ public class FlightRepositorySeed {
 
     private static void createRecToRj() throws AirportDoesNotExistException {
         String loc = "MCAKKL";
-        FlightCompanies company = FlightCompanies.LATAM;
+        FlightCompany company = FlightCompany.LATAM;
         Route route = new Route(airportFactory.getAirport(AirportCode.REC), airportFactory.getAirport(AirportCode.GIG));
         TravelTime travelTime = new TravelTime(LocalTime.of(9, 30), LocalTime.of(10, 30));
         Flight flight = new Flight(loc, company, route, travelTime);
@@ -55,7 +55,7 @@ public class FlightRepositorySeed {
 
     private static void createSpToPoa() throws AirportDoesNotExistException {
         String loc = "KAAVRO";
-        FlightCompanies company = FlightCompanies.GOL;
+        FlightCompany company = FlightCompany.GOL;
         Route route = new Route(airportFactory.getAirport(AirportCode.GRU), airportFactory.getAirport(AirportCode.POA));
         TravelTime travelTime = new TravelTime(LocalTime.of(13, 30), LocalTime.of(15, 20));
         Flight flight = new Flight(loc, company, route, travelTime);
@@ -65,7 +65,7 @@ public class FlightRepositorySeed {
 
     private static void createRecToSp() throws AirportDoesNotExistException {
         String loc = "KSTVWO";
-        FlightCompanies company = FlightCompanies.GOL;
+        FlightCompany company = FlightCompany.GOL;
         Route route = new Route(airportFactory.getAirport(AirportCode.REC), airportFactory.getAirport(AirportCode.GRU));
         TravelTime travelTime = new TravelTime(LocalTime.of(11, 00), LocalTime.of(13, 00));
         Flight flight = new Flight(loc, company, route, travelTime);

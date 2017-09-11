@@ -1,30 +1,22 @@
 package manager;
 
-import manager.exceptions.InvalidFullNameException;
-import manager.exceptions.InvalidNumberOfDigitsCPFException;
-
 public class Passenger {
-    private final String cpf;
+    private final String CPF;
     private final String name;
 
-    public Passenger(String cpf, String fullName) throws InvalidNumberOfDigitsCPFException, InvalidFullNameException {
-        validateCPF(cpf);
-        validateFullName(fullName);
-
-        this.cpf = cpf;
-        this.name = fullName;
-    }
-
-    private void validateCPF(String cpf) throws InvalidNumberOfDigitsCPFException {
-        if(cpf.length() != 11) {
-            throw new InvalidNumberOfDigitsCPFException("The CPF: " + cpf + " has not 11 digits.");
+    //default constructor
+    public Passenger(String CPF, String fName) throws Exception {
+        //check if the lenght of CPF is 11
+        if(CPF.length() != 11) {
+            throw new Exception();
         }
-    }
 
-    private void validateFullName(String fullName) throws InvalidFullNameException {
-        if(!fullName.contains(" ")){
-            throw new InvalidFullNameException("The Full Name: " + fullName + " does not have a surname.");
+        if(!fName.contains(" ")){
+            throw new Exception();
         }
+
+        this.CPF = CPF;
+        this.name = fName;
     }
 
     public Booking book(Flight flight) {

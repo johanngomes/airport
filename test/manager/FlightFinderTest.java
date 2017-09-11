@@ -38,7 +38,7 @@ public class FlightFinderTest {
         List<Flight> flight = flightFinder.find(RECIFE, RIO_DE_JANEIRO);
 
         String loc = "MCAKKL";
-        FlightCompanies company = FlightCompanies.LATAM;
+        FlightCompany company = FlightCompany.LATAM;
         Route route = new Route(airportFactory.getAirport(REC), airportFactory.getAirport(GIG));
         TravelTime travelTime = new TravelTime(LocalTime.of(9, 30), LocalTime.of(10, 30));
 
@@ -52,13 +52,13 @@ public class FlightFinderTest {
         List<Flight> flights = flightFinder.find(RECIFE, PORTO_ALEGRE);
 
         String locSpFlight = "KSTVWO";
-        FlightCompanies companySpFlight = FlightCompanies.GOL;
+        FlightCompany companySpFlight = FlightCompany.GOL;
         Route routeSpFlight = new Route(airportFactory.getAirport(REC), airportFactory.getAirport(GRU));
         TravelTime travelTimeSpFlight = new TravelTime(LocalTime.of(11, 00), LocalTime.of(13, 00));
         Flight flightToSp = new Flight(locSpFlight, companySpFlight, routeSpFlight, travelTimeSpFlight);
 
         String locPoaFlight = "KAAVRO";
-        FlightCompanies companyPoaFlight = FlightCompanies.GOL;
+        FlightCompany companyPoaFlight = FlightCompany.GOL;
         Route routePoaFlight = new Route(airportFactory.getAirport(GRU), airportFactory.getAirport(POA));
         TravelTime travelTimePoaFlight = new TravelTime(LocalTime.of(13, 30), LocalTime.of(15, 20));
         Flight flightToPoa = new Flight(locPoaFlight, companyPoaFlight, routePoaFlight, travelTimePoaFlight);

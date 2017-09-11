@@ -1,5 +1,5 @@
 package manager;
 
-public enum FlightCompanies {
+public enum FlightCompany {
     LATAM, GOL
 }

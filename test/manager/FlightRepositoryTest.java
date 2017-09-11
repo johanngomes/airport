@@ -18,7 +18,7 @@ public class FlightRepositoryTest {
         FlightRepository.removeAll();
 
         String loc = "KSTVWO";
-        FlightCompanies company = FlightCompanies.GOL;
+        FlightCompany company = FlightCompany.GOL;
 
         AirportFactory airportFactory = new AirportFactory();
 
